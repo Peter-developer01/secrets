@@ -90,17 +90,19 @@ function encrypt(text) {
 	const cipher = keys.encrypt;
 	let output = [];
 	for (let i = 0; i < text.length; i++) {
-		output.push(cipher[text[i]] || text[i]);
+		console.log(i, text[i], cipher[text[i]]);
+		output.push(cipher[text[i]].toString() || text[i]);
 	}
 	
 	return output.join("-");
 }
 
 function decrypt(text) {
-	text = text.split("-");
+	text = text.trim().split("-");
 	const cipher = keys.decrypt;
 	let output = "";
 	for (let i = 0; i < text.length; i++) {
+		console.log(i, text[i], cipher[text[i]]);
 		output += cipher[text[i]] || text[i];
 	}
 	
