@@ -90,7 +90,7 @@ function encrypt(text) {
 	const cipher = keys.encrypt;
 	let output = [];
 	for (let i = 0; i < text.length; i++) {
-		output.push(cipher[text[i]].toString() || text[i]);
+		output.push(cipher[text[i]]?.toString() || text[i]);
 	}
 	
 	return output.join("-");
