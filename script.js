@@ -98,7 +98,6 @@ function encrypt(text) {
 
 function decrypt(text) {
 	text = text.trim().replaceAll(" ", "-" + keys.encrypt[" "] + "-").split("-");
-	console.log(text);
 	const cipher = keys.decrypt;
 	let output = "";
 	for (let i = 0; i < text.length; i++) {
