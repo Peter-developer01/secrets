@@ -7,15 +7,8 @@
 	<title>Crypto</title>
 </head>
 <body>
-	<h4>Warning! Treat the keys as if they were your passwords.</h4>
-	<button id="generate-keys">Generate random cipher</button> <br>
-	<textarea id="cipher-area" cols="50" rows="10"></textarea> <br>
-	<button id="save-keys">Save keys</button>
-	<br> <br>
-
-	<input id="symbols" style="width: 80%"></input>
-	<button id="update-symbols">Update symbols</button>
-	<button id="reset-to-default">Reset to default</button>
+	<input id="key-area" cols="50" rows="10"></input> <br>
+	<button id="save-key">Save key</button>
 	<br> <br>
 
 	<textarea id="encrypt-area" cols="50" rows="10"></textarea> <br>
@@ -31,6 +24,7 @@
 		<textarea id="output" cols="50" rows="10"></textarea>
 	</div>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
 	<script src="script.js"></script>
 </body>
 </html>
